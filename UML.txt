@@ -1,0 +1,55 @@
+//This is a first mockup version of the UML diagram for that project but I think it gets the main idea behind it pretty well
+//It's a first project in standalone C# for me. I think this UML diagram has enough functions, but I'm not sure if I'll be able to pull it all off
+
+
++--------------------------------------------------------+
+|    Main Form                                           |
++--------------------------------------------------------+
+| - TransactionManager: TransactionManager               |
+| - fileManager: FileManager                             |
++--------------------------------------------------------+
+| + AddTransaction(amount: decimal, category: string)    |
+| + DeleteTransaction(id: int)                           |
+| + CalculateBalance(): decimal                          |
+| + GenerateMonthlyReport(month: int, year: int): string |
+| + GenerateYearlyReport(year: int): string              |
+| + ExportData(filename: string)                         |
+| + ImportData(filename: string)                         |
++--------------------------------------------------------+
+
++--------------------------------------------------------+
+|    Transaction                                         |
++--------------------------------------------------------+
+| - id: int                                              |
+| - amount: decimal                                      |
+| - category: string                                     |
++--------------------------------------------------------+
+
++--------------------------------------------------------+
+|    TransactionManager                                  |
++--------------------------------------------------------+
+| - transactions: List<Transaction>                      |
++--------------------------------------------------------+
+| + AddTransaction(amount: decimal, category: string)    |
+| + DeleteTransaction(id: int)                           |
+| + CalculateBalance(): decimal                          |
+| + GenerateMonthlyReport(month: int, year: int): string |
+| + GenerateYearlyReport(year: int): string              |
++--------------------------------------------------------+
+
++--------------------------------------------------------+
+|    FileManager                                         |
++--------------------------------------------------------+
+| + ExportData(filename: string)                         |
+| + ImportData(filename: string)                         |
++--------------------------------------------------------+
+
+Description
+The Main Form class represents the main form of the budget management application. 
+It contains a reference to the TransactionManager class and the FileManager class. 
+The methods of this class include adding and deleting transactions, calculating the balance, and generating monthly and yearly reports. 
+It also provides methods for exporting and importing data to and from a file.
+The Transaction class represents a single transaction, which includes an id, amount, and category.
+
+The TransactionManager class manages a list of transactions and provides methods for adding and deleting transactions, calculating the balance, and generating monthly and yearly reports.
+The FileManager class provides methods for exporting and importing transaction data to and from a file.
